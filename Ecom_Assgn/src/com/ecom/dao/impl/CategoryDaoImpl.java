@@ -19,7 +19,7 @@ public class CategoryDaoImpl implements CategoryDao {
     @Override
     public void insertCategory(Category category) throws InvalidInputException {
         Connection conn = dbUtility.connect();
-        String sql = "INSERT INTO category VALUES (?)";
+        String sql = "INSERT INTO category(category_name) VALUES (?)";
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, category.getName());

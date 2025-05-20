@@ -109,7 +109,7 @@ public class App {
 
                 case 5:
                     System.out.print("Enter Category Name : ");
-                    customer.setName(sc.nextLine());
+                    category.setName(sc.next());
 
                     try {
                         categoryService.insertCategory(category);
