@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBUtility {
     private  String url = "jdbc:mysql://localhost:3306/ecom_assgn";
     private  String userDB = "root";
-    private  String passDB = "Ashutosh@108.mysql";
+    private  String passDB = "***************";
     private  String driver = "com.mysql.cj.jdbc.Driver";
 
     private static DBUtility dbUtility = new DBUtility(); // creates 1 obj

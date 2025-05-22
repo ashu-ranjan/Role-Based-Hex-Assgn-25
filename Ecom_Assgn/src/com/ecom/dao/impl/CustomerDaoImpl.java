@@ -20,7 +20,7 @@ public class CustomerDaoImpl implements CustomerDao {
     @Override
     public void insertCustomer(Customer customer) throws InvalidInputException {
         Connection conn = dbUtility.connect();
-        String sql = "INSERT INTO customer VALUES (?,?,?)";
+        String sql = "INSERT INTO customer (name, address, phone) VALUES (?,?,?)";
 
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);

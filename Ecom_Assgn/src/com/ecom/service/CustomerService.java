@@ -11,6 +11,8 @@ public class CustomerService {
 
     private CustomerDao customerDao = new CustomerDaoImpl();
     public void insertCustomer(Customer customer) throws InvalidInputException {
+    	if (customer == null)
+    		throw new InvalidInputException("Customer should not be null");
         customerDao.insertCustomer(customer);
     }
 

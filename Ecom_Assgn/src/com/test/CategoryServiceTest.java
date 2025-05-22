@@ -36,6 +36,7 @@ public class CategoryServiceTest {
 		assertEquals("Category should not be null", excp.getMessage());
 	}
 	
+	@Test
 	public void testGetAll() {
 		List<Category> categoriesList = categoryService.getAllCat();
 		assertNotNull(categoriesList);

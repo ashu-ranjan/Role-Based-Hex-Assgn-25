@@ -7,7 +7,7 @@ public class Customer {
     private String phone;
 
     // Default constructor
-    public Customer () {};
+    public Customer() {};
 
     // Parameterized constructor
     public Customer(int custId, String name, String address, String phone) {

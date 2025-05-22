@@ -16,6 +16,8 @@ public class CategoryService {
     }
 
     public void insertCategory(Category category) throws InvalidInputException {
+    	 if (category == null)
+    	        throw new InvalidInputException("Category should not be null");
         categoryDao.insertCategory(category);
     }
 }
