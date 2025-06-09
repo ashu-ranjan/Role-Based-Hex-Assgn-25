@@ -90,4 +90,9 @@ public class HospitalController {
 
 
 
+    @GetMapping("/get/patient/bySpeciality")
+    public ResponseEntity<?> getPatientByDoctorsSpeciality(@RequestParam String speciality) {
+        return ResponseEntity.ok(patientDoctorService.getPatientByDoctorsSpeciality(speciality));
+    }
+
 }

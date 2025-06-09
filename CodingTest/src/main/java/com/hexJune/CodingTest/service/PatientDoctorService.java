@@ -1,5 +1,6 @@
 package com.hexJune.CodingTest.service;
 
+import com.hexJune.CodingTest.enums.Speciality;
 import com.hexJune.CodingTest.exception.ResourceNotFoundException;
 import com.hexJune.CodingTest.model.Doctor;
 import com.hexJune.CodingTest.model.Patient;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Service
 public class PatientDoctorService {
@@ -44,5 +46,12 @@ public class PatientDoctorService {
 
         return patientDoctorRepository.save(appointment);
 
+    }
+
+    public List<PatientDoctor> getPatientByDoctorsSpeciality(String speciality) {
+
+        Speciality doctorSpeciality;
+        doctorSpeciality = Speciality.valueOf(speciality.toUpperCase());
+        return patientDoctorRepository.findByDoctorSpeciality(doctorSpeciality);
     }
 }
